@@ -1,0 +1,29 @@
+#!/bin/bash
+
+TITLE="Monitoring commands"
+declare -A commands=( \
+        [gotop]="A terminal based graphical activity monitor inspired by gtop and vtop" \
+        [htop]="Cross-platform interactive process viewer" \
+        [bpytop]="Linux/OSX/FreeBSD resource monitor" \
+        [bashtop]="Linux/OSX/FreeBSD resource monitor" \
+        [ctop]="Top-like interface for container metrics" \
+        [iotop]="top for disk access" \
+        [iftop]="top for network connections." \
+        [systemd-cgtop]="Provides a resource use view of control groups -- basically, which services are using what resources." \
+        )
+
+
+RED="\e[31m"
+GREEN="\e[32m"
+BOLDGREEN="\e[1;32m"
+BOLDRED="\e[1;31m"
+ITALICRED="\e[3;31m"
+UNDERLINE="\e[4:32m"
+ENDCOLOR="\e[0m"
+
+
+
+echo -e "${UNDERLINE}${TITLE}${ENDCOLOR}"
+for key in "${!commands[@]}"; do
+echo -e "  ${BOLDRED}$key${ENDCOLOR} ${ITALICRED}->${ENDCOLOR} ${GREEN}${commands[$key]}${ENDCOLOR}"
+done
