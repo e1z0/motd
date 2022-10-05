@@ -1,5 +1,9 @@
 # motd
-Simple motd scripts
+Simple motd scripts for Raspberry PI
+
+
+<img width="1057" alt="Screenshot 2022-10-05 at 15 01 01" src="https://user-images.githubusercontent.com/7213361/194055689-190ca33a-9ba6-4d20-973b-3ca70831c605.png">
+
 
 # install
 
