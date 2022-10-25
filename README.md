@@ -10,10 +10,9 @@ Simple motd scripts for Raspberry PI
 ```
 sudo apt install figlet git
 git clone https://github.com/n-ham/lolcat-cc.git && cd lolcat-cc && make && sudo make install && cd .. && rm -rf lolcat-cc
-sudo git clone https://github.com/e1z0/motd /etc/update-motd
-# one way that updates motd every minute
-sudo run-parts --lsbsysinit /etc/update-motd > /etc/motd # update actual motd
+sudo git clone https://github.com/e1z0/motd /etc/update-motd.d
+sudo rm /etc/motd
+# it should update upon new login
+# If you want to use oldschool /etc/motd you can update it every minute
 echo "* * * * * root run-parts --lsbsysinit /etc/update-motd > /etc/motd" >> /etc/crontab # always update motd
-# Another way is to update dinamically opon login, just put this line to your preferred shellrc, ex.: /etc/zsh/zshrc /etc/bash.bashrc 
-run-parts --lsbsysinit /etc/update-motd
 ```
