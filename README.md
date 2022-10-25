@@ -16,3 +16,10 @@ sudo rm /etc/motd
 # If you want to use oldschool /etc/motd you can update it every minute
 echo "* * * * * root run-parts --lsbsysinit /etc/update-motd > /etc/motd" >> /etc/crontab # always update motd
 ```
+
+
+
+You can add user defined services in **$HOME/.srvc** (please note that motd generation works in super user privileges as root)
+```
+services=("docker" "nfs-server")
+```
