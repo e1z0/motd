@@ -8,7 +8,7 @@ Simple motd scripts for Raspberry PI
 # install
 
 ```
-sudo apt install figlet git
+sudo apt install figlet git bsdmainutils
 git clone https://github.com/n-ham/lolcat-cc.git && cd lolcat-cc && make && sudo make install && cd .. && rm -rf lolcat-cc
 sudo git clone https://github.com/e1z0/motd /etc/update-motd.d
 sudo rm /etc/motd
